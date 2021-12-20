@@ -1,11 +1,12 @@
-package com.Base;
+package com.adactinbase;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Base_Class {
+public class Baseclass_Adactin {
+	
 	public static WebDriver driver;
 
 	public static WebDriver getbrowser(String type) {
@@ -15,7 +16,6 @@ public class Base_Class {
 
 			driver = new ChromeDriver();
 
-			
 		}
 
 		else if (type.equalsIgnoreCase("Firefox")) {
@@ -28,21 +28,20 @@ public class Base_Class {
 		return driver;
 
 	}
-
+	
+	
 	public static void geturl(String url) {
+		
 		driver.get(url);
-
+		
 	}
-
-	public static void Clickelement(WebElement element) {
-
-		element.click();
-	}
-
-	public static void sendkeys(WebElement element, String value) {
-
+	
+	
+	public static  void sendkeys(WebElement element , String value) {
+		
 		element.sendKeys(value);
 
 	}
+	
 
 }
